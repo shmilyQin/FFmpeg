@@ -3116,10 +3116,11 @@ static int64_t mpegts_get_dts(AVFormatContext *s, int stream_index,
                 int64_t dts = pkt.dts;
                 *ppos = pkt.pos;
                 av_packet_unref(&pkt);
-                if (s->streams[stream_index]->codecpar->codec_id == AV_CODEC_ID_HEVC && s->streams[pkt.stream_index]->parser->key_frame)
-                {
-                    return dts;
-                }
+                return dts;
+                // if (s->streams[stream_index]->codecpar->codec_id == AV_CODEC_ID_HEVC && s->streams[pkt.stream_index]->parser->key_frame)
+                // {
+                //     return dts;
+                // }
             }
         }
         pos = pkt.pos;
