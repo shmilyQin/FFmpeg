@@ -3463,7 +3463,7 @@ static int hevc_decode_frame(AVCodecContext *avctx, void *data, int *got_output,
 
     if (s->is_decoded)
     {
-        av_log(avctx, AV_LOG_DEBUG, "QSB Decoded frame with POC %d.\n", s->poc);
+        av_log(avctx, AV_LOG_DEBUG, "Ayla Decoded frame with POC %d.\n", s->poc);
         s->is_decoded = 0;
     }
 
