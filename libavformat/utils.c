@@ -2771,8 +2771,7 @@ int av_seek_frame(AVFormatContext *s, int stream_index,
             max_ts = timestamp;
         else
             min_ts = timestamp;
-        return avformat_seek_file(s, stream_index, min_ts, timestamp, max_ts,
-                                  flags & ~AVSEEK_FLAG_BACKWARD);
+        return avformat_seek_file(s, stream_index, min_ts, timestamp, max_ts, 1);
     }
 
     ret = seek_frame_internal(s, stream_index, timestamp, flags);

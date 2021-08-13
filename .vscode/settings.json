@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "avformat.h": "c",
+    "mpegts.h": "c"
+  }
+}
