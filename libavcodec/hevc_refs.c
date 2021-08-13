@@ -238,8 +238,7 @@ int ff_hevc_output_frame(HEVCContext *s, AVFrame *out, int flush)
                           (frame->window.top_offset >> vshift) * dst->linesize[i];
                 dst->data[i] += off;
             }
-            av_log(s->avctx, AV_LOG_DEBUG,
-                   "Ayla Output frame with POC %d.\n", frame->poc);
+            av_log(s->avctx, AV_LOG_DEBUG, "Ayla Output frame with POC %d.\n", frame->poc);
             return 1;
         }
 
